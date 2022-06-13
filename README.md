@@ -7,11 +7,7 @@
   ## 插件安装
 
   1. 将本插件文件放到自定义插件目录下，放到zhenxun_bot/plugins下也行(不推荐，更新会替换这个目录)并安装相关依赖
-
-     ```
-     pip3 install -r requirements.txt
-     ```
-     
+  `pip3 install -r requirements.txt`
   2. 使用真寻插件商店命令安装
 
      - 更新插件仓库
