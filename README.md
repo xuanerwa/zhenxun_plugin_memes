@@ -1,6 +1,6 @@
 - # zhenxun_plugin_memes
 
-  zhenxun_bot 头像表情包插件
+  zhenxun_bot 表情包制作插件
 
   移植自[nonebot-plugin-memes](https://github.com/noneplugin/nonebot-plugin-memes)
 
