@@ -61,7 +61,7 @@ def create_matchers():
     for meme in memes:
         on_message(
             regex(meme.pattern),
-            block=False,
+            block=True,
             priority=5,
         ).append_handler(handler(meme))
 
