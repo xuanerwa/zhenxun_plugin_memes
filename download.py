@@ -60,9 +60,19 @@ async def check_resources():
                 f.write(data)
         except Exception as e:
             logger.warning(str(e))
-    await add_font("FZXS14.ttf", DATA_PATH/"fonts"/"FZXS14.ttf")
-    await add_font("FZSEJW.ttf", DATA_PATH/"fonts"/"FZSEJW.ttf")
-    await add_font("FZSJ-QINGCRJ.ttf", DATA_PATH/"fonts"/"FZSJ-QINGCRJ.ttf")
+    fonts_path = data_path / "fonts"
+    FZXS14_path = fonts_path / "FZXS14.ttf"
+    FZSEJW_path = fonts_path / "FZSEJW.ttf"
+    FZSJ_path = fonts_path / "FZSJ-QINGCRJ.ttf"
+    if not FZXS14_path.exists():
+        FZXS14_path = resource_url("fonts/FZXS14.ttf")
+    if not FZSEJW_path.exists():
+        FZSEJW_path = resource_url("fonts/FZSEJW.ttf")
+    if not FZSJ_path.exists():
+        FZSJ_path = resource_url("fonts/FZSJ-QINGCRJ.ttf")
+    await add_font("FZXS14.ttf", FZXS14_path)
+    await add_font("FZSEJW.ttf", FZSEJW_path)
+    await add_font("FZSJ-QINGCRJ.ttf", FZSJ_path)
 
 
 driver = get_driver()
